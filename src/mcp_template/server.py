@@ -1,7 +1,7 @@
 from .config import initialize_fastmcp_server
 from .tools import register_tools
-# from .prompts import register_prompts
 from .resources import register_resources
+# from .prompts import register_prompts
 import logging
 
 logging.basicConfig(
@@ -22,7 +22,7 @@ logger.info("Tools registered successfully.")
 try:
     register_resources(mcp)
 except Exception as e:
-    logger.error(f"Error during tool registration: {e}")
+    logger.error(f"Failed to register resources: {e}")
     raise
 logger.info("Resources registered successfully.")
 

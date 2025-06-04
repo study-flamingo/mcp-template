@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp.server import FastMCP
 
 
 def register_tools(mcp: FastMCP) -> None:

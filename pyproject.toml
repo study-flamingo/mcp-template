@@ -1,15 +1,17 @@
 [project]
 name = "mcp-template"
 version = "0.1.0"
-description = "Add your description here"
+description = "A template for MCP servers using FastMCP 2.6"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastmcp>=2.6.1",
-    "qbosdk>=0.22.0",
 ]
 
 [dependency-groups]
 dev = [
     "ruff>=0.11.12",
 ]
+
+[project.scripts]
+mcp-template = "mcp_template.__main__:cli"
