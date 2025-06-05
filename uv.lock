@@ -254,6 +254,12 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5d/a6/8f5ee9da9f67c0fd8933f63d6105f02eabdac8a8c0926728368ffbb6744d/mcp-1.9.2-py3-none-any.whl", hash = "sha256:bc29f7fd67d157fef378f89a4210384f5fecf1168d0feb12d22929818723f978", size = 131083, upload-time = "2025-05-29T14:42:16.211Z" },
 ]
 
+[package.optional-dependencies]
+cli = [
+    { name = "python-dotenv" },
+    { name = "typer" },
+]
+
 [[package]]
 name = "mcp-template"
 version = "0.1.0"
@@ -264,6 +270,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "mcp", extra = ["cli"] },
     { name = "ruff" },
 ]
 
@@ -271,7 +278,10 @@ dev = [
 requires-dist = [{ name = "fastmcp", specifier = ">=2.6.1" }]
 
 [package.metadata.requires-dev]
-dev = [{ name = "ruff", specifier = ">=0.11.12" }]
+dev = [
+    { name = "mcp", extras = ["cli"], specifier = ">=1.9.2" },
+    { name = "ruff", specifier = ">=0.11.12" },
+]
 
 [[package]]
 name = "mdurl"

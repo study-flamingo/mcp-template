@@ -9,4 +9,5 @@ def initialize_fastmcp_server() -> FastMCP:
         name="MCP Server Template",
         version="1.0.0",
         instructions="This is an MCP server template. Customize me to suit your needs!",
+        
     )
